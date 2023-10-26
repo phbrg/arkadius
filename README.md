@@ -12,13 +12,13 @@ npm install
 > Runing the app
 
  - Create a .env archive contains:
-	1. POSTGRES_HOST
-	2. POSTGRES_DATABASE
-	3. POSTGRES_USER
-	4. POSTGRES_PASSWORD
-	5. ADMIN_WEBHOOK ( Discord logs )
-	6. AUTH_WEBHOOK ( Discord logs )
-	7. ERROR_WEBHOOK ( Discord logs )
+	- POSTGRES_HOST
+	- POSTGRES_DATABASE
+	- POSTGRES_USER
+	- POSTGRES_PASSWORD
+	- ADMIN_WEBHOOK ( Discord logs )
+	- AUTH_WEBHOOK ( Discord logs )
+	- ERROR_WEBHOOK ( Discord logs )
 - Start the server
 ```bash
 npm run start
