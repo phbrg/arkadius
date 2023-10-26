@@ -1,0 +1,18 @@
+{{#if isLog}}
+  <h1>Go edit your <span class="gradient-text">personal page</span>!<br>
+  like you live <span class="gradient-text">your life</span>.</h1>
+  <button class="edit-profile">edit profile</button>
+
+{{else}}
+<div class="home-text">
+  <h1>Show the <span class="gradient-text">world</span> who you are!</h1>
+  <h2>Create a profile on <span class="gradient-text">Arkadius</span></h2>
+</div>
+<form action="/" method="POST">
+  <input placeholder="Your username" type="text" name="name">
+  <button><i class="fa-solid fa-arrow-right"></i></button>
+</form>
+<p>Already have an account? <a href="/auth/login">Login here</a></p>
+{{/if}}
+
+<link rel="stylesheet" href="/style/home.css">

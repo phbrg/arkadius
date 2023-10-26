@@ -1,0 +1,32 @@
+<p>To add links follow this pattern: https://link1.com,https://link2.com</p>
+<form action="/auth/edit_profile" method="POST" enctype="multipart/form-data">
+  <div class="part">
+    <label for="icon">Profile picture</label>
+    <input type="file" name="icon">
+  </div>
+  <div class="part">
+    <label for="name">Username</label>
+    <input type="text" name="name" placeholder="Username" value="{{profileDb.name}}">
+  </div>
+  <div class="part">
+    <label for="bio">Bio</label>
+    <input type="text" name="bio" placeholder="Bio" value="{{profileDb.bio}}">
+  </div>
+  <div class="part">
+    <label for="background">Background color</label>
+    <input type="color" name="background" class="color-input" placeholder="Background color"
+      value="{{profileDb.background}}">
+  </div>
+  <div class="part">
+    <label for="background">Border color</label>
+    <input type="color" name="border" class="color-input" placeholder="Border color" value="{{profileDb.border}}">
+  </div>
+  <div class="part">
+    <label for="links">Links</label>
+    <input type="text" name="links" placeholder="Links" value="{{profileDb.links}}">
+  </div>
+  <button>Edit</button>
+</form>
+<a href="/auth/edit_user" class="edit-personal">Edit personal informations</a>
+
+<link rel="stylesheet" href="/style/editProfile.css">

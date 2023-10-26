@@ -1,0 +1,11 @@
+<form action="/auth/register" method="POST">
+  <h1>Join on <span class="gradient-text">Arkadius</span>!</h1>
+  <input type="text" name="name" value="{{this.name}}" placeholder="Your name">
+  <input type="email" name="email" placeholder="Your email">
+  <input type="password" name="password" id="password" placeholder="Your password">
+  <input type="password" name="confirmpassword" id="password" placeholder="Confirm password">
+  <button>Register</button>
+</form>
+<p>Alredy have an account? <a href="/auth/login">Register Here</a></p>
+
+<link rel="stylesheet" href="/style/auth.css">

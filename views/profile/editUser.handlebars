@@ -1,0 +1,18 @@
+<form action="/auth/edit_user" method="POST">
+  <input type="text" name="email" placeholder="Email" value="{{userDb.email}}">
+  <input type="text" name="password" placeholder="Password">
+  <input type="text" name="confirmPassword" placeholder="Confirm password">
+  <button>Save</button>
+</form>
+<button onclick="openModal()" class="delete">Delete account</button>
+<a href="/">get back home</a>
+
+<div class="delet-account">
+  <h1>Are you sure you want to delete your account?</h1>
+  <form action="/auth/delete_user" method="POST">
+    <button>Delete account permanently</button>
+  </form>
+  <button onclick="closeModal()">Cancel</button>
+</div>
+
+<link rel="stylesheet" href="/style/editUserProfile.css">

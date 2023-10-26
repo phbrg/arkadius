@@ -1,0 +1,32 @@
+{
+  "name": "arkadius",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "keywords": [],
+  "author": "phdev (backend), hiaki (frontend)",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^7.1.2",
+    "express-rate-limit": "^7.0.2",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "pg-promise": "^11.5.4",
+    "sequelize": "^6.33.0",
+    "session-file-store": "^1.5.0"
+  }
+}

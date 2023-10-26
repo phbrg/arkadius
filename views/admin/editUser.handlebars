@@ -1,0 +1,33 @@
+<h1>Admin edit user</h1>
+<p>To edit an user links, roles or badges you need to follow the pattern: role1,role2,role3.</p>
+<form action="/admin/{{userDb.id}}" method="POST">
+  <div class="container">
+    <div class="first-collumn">
+      <input type="hidden" name="profileId" value="{{profileDb.id}}">
+      <input type="hidden" name="userId" value="{{userDb.id}}">
+      <input type="text" value="{{userDb.name}}" placeholder="user name" name="name">
+      <input type="text" value="{{userDb.email}}" placeholder="email" name="email">
+      <input type="text" value="{{userDb.roles}}" placeholder="roles" name="roles">
+      <input type="text" value="{{profileDb.icon}}" placeholder="icon" name="icon">
+    </div>
+    <div class="second-collumn">
+      <input type="text" value="{{profileDb.background}}" placeholder="background" name="background">
+      <input type="text" value="{{profileDb.border}}" placeholder="border" name="border">
+      <input type="text" value="{{profileDb.bio}}" placeholder="bio" name="bio">
+      <input type="text" value="{{profileDb.badges}}" placeholder="badges" name="badges">
+      <input type="text" value="{{profileDb.links}}" placeholder="links" name="links">
+    </div>
+  </div>
+  <button>Edit</button>
+</form>
+<button onclick="openModal()" class="delet">Delete user</button>
+<div class="delet-account">
+  <h1>Are you sure you want to delete your account?</h1>
+  <form action="/admin/ban/{{userDb.id}}" method="POST">
+    <button>Delete account permanently</button>
+  </form>
+  <button onclick="closeModal()">Cancel</button>
+</div>
+<a href="/">get back to admin dashboard</a>
+
+<link rel="stylesheet" href="/style/editUser.css">

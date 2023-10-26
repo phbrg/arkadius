@@ -1,0 +1,32 @@
+<div class="bg" style="background-color: {{profile.background}};">
+    <span class="share-profile" onclick="shareProfile()"><i class="fa-solid fa-share"></i></span>
+    {{#if isOwner}}
+    <a href="/auth/edit_profile" class="edit-profile">Edit profile</a>
+    {{/if}}
+
+    <div class="container">
+        <img style="border: 5px solid {{profile.border}};" src="{{profilePic}}" alt="Profile icon">
+
+        <h2>/{{profile.name}}</h2>
+        <h6>{{formatDate}}</h6>
+        <h4>{{profile.bio}}</h4>
+        <div class="badges">
+            {{#each badges}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+    </div>
+    {{#if haveLinks}}
+    <div class="links">
+        {{#each links}}
+        <a href="{{this}}" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>{{this}}</p>
+        </a>
+        {{/each}}
+    </div>
+    {{/if}}
+    <div class="notice" id="notice">Copied profile url, send to your friends!</div>
+</div>
+
+<link rel="stylesheet" href="/style/profile.css">

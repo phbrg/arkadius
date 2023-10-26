@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {{{link}}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/a.png" type="image/x-icon">
+    <script src="/scripts/script.js"></script>
+    <title>Arkadius</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/images/a.png" alt="logo-home" width="32"></a>
+        <nav>
+            {{#if session.userid}}
+            <a href="/profile">Profile</a>
+            <a href="/auth/logout">Logout</a>
+            {{else}}
+            <a href="/auth/login">Login</a>
+            <a href="/auth/register">Register</a>
+            {{/if}}
+        </nav>
+    </header>
+    {{#if messages.message}}
+    <div class="flash">
+        {{messages.message}}
+    </div>
+    {{/if}}
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        <p>Arkadius &copy; 2023</p>
+        <a href="https://discord.gg/Sca7vwpkX9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+    </footer>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<form action="/admin" method="GET">
+  <h1>Admin panel</h1>
+  <input type="text" name="search" placeholder="Search for username" value="{{search}}">
+  <button>Search</button>
+</form>
+
+<ul>
+  {{#each user}}
+  <li>
+    <p><span>Id:</span> {{this.id}}</p>
+    <p><span>Name:</span> {{this.name}}</p>
+    <p><span>Email:</span> {{this.email}}</p>
+    <p><span>Roles:</span> {{this.roles}}</p>
+    <a href="/admin/{{this.id}}">Edit</a>
+  </li>
+  {{/each}}
+</ul>
+
+<link rel="stylesheet" href="/style/admin.css">
