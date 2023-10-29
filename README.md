@@ -11,7 +11,7 @@ npm install
 
 > Runing the app
 
- - Create a .env archive contains:
+ - Create a .env file that contains:
 	- POSTGRES_HOST
 	- POSTGRES_DATABASE
 	- POSTGRES_USER
